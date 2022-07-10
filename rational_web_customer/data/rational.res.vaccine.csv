@@ -1,0 +1,14 @@
+id,name
+res_vaccine_choose,Select Vaccine Type
+res_vaccine_pfizer_biontech,Pfizer BionTech Comirnaty
+res_vaccine_moderna,Moderna Spikevax
+res_vaccine_sinovac,SinoVac CoronaVac
+res_vaccine_astrazeneca,Oxford/AstraZeneca
+res_vaccine_covishied,Covishield
+res_vaccine_covaxin,Covaxin
+res_vaccine_sinopharm,Sinopharm Covilo
+res_vaccine_vaxzevria,Vaxzevria
+res_vaccine_convidecia,Convidecia
+res_vaccine_covovax,Covovax
+res_vaccine_nuvaxovid,Nuvaxovid
+res_vaccine_jjcov2,Janssen Ad26.COV2.S

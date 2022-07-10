@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rational_res_religion,access.rational.res.religion,model_rational_res_religion,,1,1,1,1
+access_rational_res_source,access.rational.res.source,model_rational_res_source,,1,1,1,1
+access_rational_res_vaccine,access.rational.res.vaccine,model_rational_res_vaccine,,1,1,1,1
