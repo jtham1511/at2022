@@ -1,0 +1,22 @@
+<odoo>
+
+    <record id="idcard_rational" model="ir.actions.report">
+        <field name="name">Security ID Card</field>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">res.partner.security_idcard</field>
+        <field name="report_file">res.partner.security_idcard</field>
+        <field name="binding_model_id" ref="model_res_partner"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="security_idcard">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="o">
+                <center>
+                    <h1>Asia Teaching 2022</h1>
+                </center>
+            </t>
+        </t>
+    </template>
+</odoo>

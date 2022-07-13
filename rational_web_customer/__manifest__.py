@@ -14,13 +14,14 @@
     'website': 'https://www.rational.com.sg/',
 
     # Dependency
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
     'data': [
         'security/ir.model.access.csv',
         'data/rational.res.source.csv',
         'data/rational.res.religion.csv',
         'data/rational.res.vaccine.csv',
         'views/backup_res_at_partner_views.xml',
+        'report/report.xml'
     ],
     # Other
     'installable': True,
