@@ -31,12 +31,12 @@ class WebFormPartner(models.Model):
     is_ograniser = fields.Boolean(string="Is Organiser")
     is_shanga_member = fields.Boolean(string="Is Sangha")
     no_of_participant = fields.Integer(string="No of Participant")
-    vaccine_fist_dose = fields.Many2one('rational.res.vaccine', string='1st dose Vaccine Type', ondelete='restrict',
+    vaccine_fist_dose = fields.Many2one('rational.res.vaccine', string='1st dose Vaccine Type',
                                         placeholder='Vaccine Type')
-    vaccine_second_dose = fields.Many2one('rational.res.vaccine', string='2nd dose Vaccine Type', ondelete='restrict')
-    vaccine_third_dose = fields.Many2one('rational.res.vaccine', string='3rd dose Vaccine Type', ondelete='restrict')
-    vaccine_first_booster = fields.Many2one('rational.res.vaccine', string='1st booster Vaccine Type', ondelete='restrict')
-    vaccine_second_booster = fields.Many2one('rational.res.vaccine', string='2nd booster Vaccine Type', ondelete='restrict')
+    vaccine_second_dose = fields.Many2one('rational.res.vaccine', string='2nd dose Vaccine Type')
+    vaccine_third_dose = fields.Many2one('rational.res.vaccine', string='3rd dose Vaccine Type')
+    vaccine_first_booster = fields.Many2one('rational.res.vaccine', string='1st booster Vaccine Type')
+    vaccine_second_booster = fields.Many2one('rational.res.vaccine', string='2nd booster Vaccine Type')
     date_vaccine_first = fields.Date(string='1st dose Vaccine Date')
     date_vaccine_second = fields.Date(string='2nd dose Vaccine Date')
     date_vaccine_third = fields.Date(string='3rd dose Vaccine Date')

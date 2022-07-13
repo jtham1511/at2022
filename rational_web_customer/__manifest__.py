@@ -14,16 +14,15 @@
     'website': 'https://www.rational.com.sg/',
 
     # Dependency
-    'depends': [],
+    'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
         'data/rational.res.source.csv',
         'data/rational.res.religion.csv',
         'data/rational.res.vaccine.csv',
-#        'views/res_at_partner_views.xml',
+        'views/backup_res_at_partner_views.xml',
     ],
     # Other
     'installable': True,
-    'application': True,
     'license': 'LGPL-3',
 }

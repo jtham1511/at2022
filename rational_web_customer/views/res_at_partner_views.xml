@@ -6,6 +6,7 @@
         <field name="model">res.partner</field>
         <field name="mode">primary</field>
         <field name="priority">100</field>
+        <field name="inherit_id" ref="base.view_partner_form"></field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
