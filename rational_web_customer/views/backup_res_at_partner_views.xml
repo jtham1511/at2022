@@ -22,7 +22,6 @@
                 <page name="personal_info" string="Personal Details">
                     <group>
                         <group>
-                            <field name="security_id"/>
                             <field name="title"/>
                             <field name="gender"/>
                             <field name="country_residence"/>

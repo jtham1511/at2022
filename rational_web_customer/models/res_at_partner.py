@@ -42,7 +42,6 @@ class WebFormPartner(models.Model):
     date_vaccine_third = fields.Date(string='3rd dose Vaccine Date')
     date_vaccine_booster1 = fields.Date(string='1st booster Vaccine Date')
     date_vaccine_booster2 = fields.Date(string='2nd booster Vaccine Date')
-    security_id = fields.Char()
 
 
 class RationalResReligion(models.Model):
