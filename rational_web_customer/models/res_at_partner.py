@@ -7,6 +7,8 @@ from odoo import api, fields, models, _
 class WebFormPartner(models.Model):
     _inherit = 'res.partner'
 
+    at2022_id = fields.Char(string='Participant Security ID', required=True, readonly=True,
+                            default=lambda self: _('New'))
     gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string="Gender")
     country_residence = fields.Many2one('res.country', string='Country of Residence')
     passport_number = fields.Char(string="Passport Number")
@@ -24,7 +26,7 @@ class WebFormPartner(models.Model):
     being_india_before = fields.Selection([('yes', 'Yes'), ('no', 'No')], string="First Trip to India ?")
     enrol_mailing_list = fields.Selection([('yes', 'Yes'), ('no', 'No')],
                                           string="Do you wish to be part of our e-mailing list ？")
-    recent_photo = fields.Binary(string="Copy of recent photograph")
+    recent_photo = fields.Image(string="Copy of recent photograph")
     passport_upload = fields.Binary(string="Copy of passport page with personal details")
     visa_upload = fields.Binary(string="Copy of India Visa (optional)")
     vaccine_upload = fields.Binary(string="Copy of your Notarised Vaccine Certificate")
@@ -42,6 +44,13 @@ class WebFormPartner(models.Model):
     date_vaccine_third = fields.Date(string='3rd dose Vaccine Date')
     date_vaccine_booster1 = fields.Date(string='1st booster Vaccine Date')
     date_vaccine_booster2 = fields.Date(string='2nd booster Vaccine Date')
+
+    @api.model
+    def create(self, vals):
+        if vals.get('at2022_id', _('New')) == _('New'):
+            vals['at2022_id'] = self.env['ir.sequence'].next_by_code('at2022_pid') or _('New')
+        res = super(WebFormPartner, self).create(vals)
+        return res
 
 
 class RationalResReligion(models.Model):

@@ -17,6 +17,7 @@
     'depends': ['base', 'mail'],
     'data': [
         'security/ir.model.access.csv',
+        'data/id_data.xml',
         'data/rational.res.source.csv',
         'data/rational.res.religion.csv',
         'data/rational.res.vaccine.csv',

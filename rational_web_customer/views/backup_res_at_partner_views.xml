@@ -5,6 +5,12 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='image_1920']" position="after">
+                <field name="recent_photo" widget="image" class="oe_avatar"/>
+            </xpath>
+            <xpath expr="//field[@name='image_1920']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
             <field name="function" position="attributes">
                 <attribute name="invisible">1</attribute>
             </field>
@@ -17,6 +23,7 @@
 
             <xpath expr="//field[@name='category_id']" position="after">
                 <field name="company_name" string="Organisation Name"/>
+                <field name="at2022_id"/>
             </xpath>
             <xpath expr="//page[@name='contact_addresses']" position="before">
                 <page name="personal_info" string="Personal Details">
