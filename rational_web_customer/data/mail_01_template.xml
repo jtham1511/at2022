@@ -11,38 +11,53 @@
             <field name="body_html" type="html">
                 <div style="margin: 0px; padding: 0px;">
                     <p style="margin: 0px; padding: 0px; font-size: 13px;">
-                        Dear {{object.name}}
-                        <br /><br />
+                        Dear <t t-out="object.name or 'Participant'">Participant</t>
+                        <br/>
+                        <br/>
                         We've received your registration submission for 2022 Asia Teaching by His Holiness the 14th
                         Dalai Lama, 15th September to 16th September 2022.
-                        <br /><br />
-                        {{object.at2022_id}} - {{object.name}}
-                        <br /><br />
+                        <br/>
+                        <br/>
+                         <t t-out="object.name or 'Participant'">Participant</t> - <t t-out="object.at2022_id or
+                         'Security ID'">Security ID</t>
+                        <br/>
+                        <br/>
                         Please keep this Registration ID as a point of communication reference.
-                        <br /><br />
+                        <br/>
+                        <br/>
                         If you did not have your India visa details during registration, please email them to
                         registration@tibetanbc.org latest by 31st Aug 2022 to ensure confirmation of your registration.
                         The QR code is unique to you and is required for verification during the collection of security.
                         Meanwhile, if you do need any assistance or clarifications required, please contact us at
                         registration@tibetanbc.org with the Registration ID.
-                        <br /><br />
+                        <br/>
+                        <br/>
                         You may also visit the for information about this teaching event
-                        https://www.tibetanbc.org/dalai-lama-asia-teaching/register-for-teaching
-                        <br /><br />
+                        <br/>
+                        <a t-attf-href="https://www.tibetanbc.org/dalai-lama-asia-teaching/register-for-teaching"
+                           target="new">https://www.tibetanbc.org/dalai-lama-asia-teaching/register-for-teaching</a>
+                        <br/>
+                        <br/>
                         Merit Making opportunity click on the following link.
-                        <br /><br />
-                        https://www.tibetanbc.org/support-us/merit-making
-                        <br /><br />
+                        <br/>
+                        <a t-attf-href="https://www.tibetanbc.org/support-us/merit-making" target="new">https://
+                            www.tibetanbc.org/support-us/merit-making</a>
+                        <br/>
+                        <br/>
                         Thank you and we rejoice in your participation of the teaching.
-                        <br /><br />
+                        <br/>
+                        <br/>
                         2022 Asia Teaching Organising Committee reserves the rights to review or refuse any participant
                         registrations upon the verification process with His Holiness Office.
-                        <br /><br />
+                        <br/>
+                        <br/>
                         Best Regards,
-                        <br /><br/>
+                        <br/>
+                        <br/>
                         Tibetan Buddhist Centre - Organiser and Main Coordinator of Asia Teaching
                         2022 Asia Teaching Organising Committee
-                        <br /><br />
+                        <br/>
+                        <br/>
                     </p>
                 </div>
             </field>

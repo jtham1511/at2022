@@ -50,10 +50,14 @@ class WebFormPartner(models.Model):
         if vals.get('at2022_id', _('New')) == _('New'):
             vals['at2022_id'] = self.env['ir.sequence'].next_by_code('at2022_pid') or _('New')
         res = super(WebFormPartner, self).create(vals)
-#        template_id = self.env.ref('rational_web_customer.email_template_registration').id
+
+        template_id = self.env.ref('rational_web_customer.email_template_registration').id
+        self.env['mail.template'].browse(template_id).send_mail(res.id, force_send=True)
+        return res
+
+    def action_send_email(self):
         template_id = self.env.ref('rational_web_customer.email_template_registration').id
         self.env['mail.template'].browse(template_id).send_mail(self.id, force_send=True)
-        return res
 
 
 class RationalResReligion(models.Model):

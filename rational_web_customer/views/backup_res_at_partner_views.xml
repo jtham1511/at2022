@@ -5,88 +5,91 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='image_1920']" position="after">
-                <field name="recent_photo" widget="image" class="oe_avatar"/>
-            </xpath>
-            <xpath expr="//field[@name='image_1920']" position="attributes">
-                <attribute name="invisible">1</attribute>
-            </xpath>
-            <field name="function" position="attributes">
-                <attribute name="invisible">1</attribute>
-            </field>
-            <field name="vat" position="attributes">
-                <attribute name="invisible">1</attribute>
-            </field>
-            <xpath expr="//page[@name='sales_purchases']" position="attributes">
-                <attribute name="invisible">1</attribute>
-            </xpath>
+                <xpath expr="//page[@name='contact_addresses']" position="inside">
+                    <button name="action_send_email" type="object" string="Send by email" class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//field[@name='image_1920']" position="after">
+                    <field name="recent_photo" widget="image" class="oe_avatar"/>
+                </xpath>
+                <xpath expr="//field[@name='image_1920']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <field name="function" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="vat" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
 
-            <xpath expr="//field[@name='category_id']" position="after">
-                <field name="company_name" string="Organisation Name"/>
-                <field name="at2022_id"/>
-            </xpath>
-            <xpath expr="//page[@name='contact_addresses']" position="before">
-                <page name="personal_info" string="Personal Details">
-                    <group>
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="company_name" string="Organisation Name"/>
+                    <field name="at2022_id"/>
+                </xpath>
+                <xpath expr="//page[@name='contact_addresses']" position="before">
+                    <page name="personal_info" string="Personal Details">
                         <group>
-                            <field name="title"/>
-                            <field name="gender"/>
-                            <field name="country_residence"/>
-                            <field name="country_id" string="Nationality"/>
-                            <field name="phone"/>
-                            <field name="email"/>
+                            <group>
+                                <field name="title"/>
+                                <field name="gender"/>
+                                <field name="country_residence"/>
+                                <field name="country_id" string="Nationality"/>
+                                <field name="phone"/>
+                                <field name="email"/>
+                            </group>
+                            <group>
+                                <field name="passport_number"/>
+                                <field name="date_passport_issue"/>
+                                <field name="date_passport_expiry"/>
+                                <field name="travel_visa"/>
+                                <field name="date_visa_issue"/>
+                                <field name="date_visa_expiry"/>
+                                <field name="emergency_contact_name"/>
+                                <field name="emergency_contact_number"/>
+                                <field name="emergency_contact_relation"/>
+                            </group>
                         </group>
+                    </page>
+                    <page name="vaccine_info" string="Vaccination Info">
                         <group>
-                            <field name="passport_number"/>
-                            <field name="date_passport_issue"/>
-                            <field name="date_passport_expiry"/>
-                            <field name="travel_visa"/>
-                            <field name="date_visa_issue"/>
-                            <field name="date_visa_expiry"/>
-                            <field name="emergency_contact_name"/>
-                            <field name="emergency_contact_number"/>
-                            <field name="emergency_contact_relation"/>
+                            <group>
+                                <field name="vaccine_fist_dose"/>
+                                <field name="vaccine_second_dose"/>
+                                <field name="vaccine_third_dose"/>
+                                <field name="vaccine_first_booster"/>
+                                <field name="vaccine_second_booster"/>
+                            </group>
+                            <group>
+                                <field name="date_vaccine_first"/>
+                                <field name="date_vaccine_second"/>
+                                <field name="date_vaccine_third"/>
+                                <field name="date_vaccine_booster1"/>
+                                <field name="date_vaccine_booster2"/>
+                            </group>
                         </group>
-                    </group>
-                </page>
-                <page name="vaccine_info" string="Vaccination Info">
-                    <group>
+                    </page>
+                    <page name="document_upload" string="Document Upload">
                         <group>
-                            <field name="vaccine_fist_dose"/>
-                            <field name="vaccine_second_dose"/>
-                            <field name="vaccine_third_dose"/>
-                            <field name="vaccine_first_booster"/>
-                            <field name="vaccine_second_booster"/>
+                            <group>
+                                <field name="recent_photo"/>
+                                <field name="passport_upload"/>
+                            </group>
+                            <group>
+                                <field name="visa_upload"/>
+                                <field name="vaccine_upload"/>
+                            </group>
                         </group>
+                    </page>
+                    <page name="declaration_info" string="Declaration Info">
                         <group>
-                            <field name="date_vaccine_first"/>
-                            <field name="date_vaccine_second"/>
-                            <field name="date_vaccine_third"/>
-                            <field name="date_vaccine_booster1"/>
-                            <field name="date_vaccine_booster2"/>
+                            <field name="being_india_before"/>
+                            <field name="attend_teaching_before"/>
+                            <field name="hear_teaching"/>
                         </group>
-                    </group>
-                </page>
-                <page name="document_upload" string="Document Upload">
-                    <group>
-                        <group>
-                            <field name="recent_photo"/>
-                            <field name="passport_upload"/>
-                        </group>
-                        <group>
-                            <field name="visa_upload"/>
-                            <field name="vaccine_upload"/>
-                        </group>
-                    </group>
-                </page>
-                <page name="declaration_info" string="Declaration Info">
-                    <group>
-                        <field name="being_india_before"/>
-                        <field name="attend_teaching_before"/>
-                        <field name="hear_teaching"/>
-                    </group>
-                </page>
-            </xpath>
+                    </page>
+                </xpath>
         </field>
     </record>
 </odoo>
