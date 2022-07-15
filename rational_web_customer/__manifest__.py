@@ -21,6 +21,7 @@
         'data/rational.res.source.csv',
         'data/rational.res.religion.csv',
         'data/rational.res.vaccine.csv',
+        'data/mail_01_template.xml',
         'views/backup_res_at_partner_views.xml',
         'report/report.xml'
     ],
