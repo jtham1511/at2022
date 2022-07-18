@@ -26,7 +26,7 @@ class WebFormPartner(models.Model):
     being_india_before = fields.Selection([('yes', 'Yes'), ('no', 'No')], string="First Trip to India ?")
     enrol_mailing_list = fields.Selection([('yes', 'Yes'), ('no', 'No')],
                                           string="Do you wish to be part of our e-mailing list ？")
-    recent_photo = fields.Image(string="Copy of recent photograph")
+    recent_photo = fields.Image(string="Recent photograph")
     passport_upload = fields.Binary(string="Copy of passport page with personal details")
     visa_upload = fields.Binary(string="Copy of India Visa (optional)")
     vaccine_upload = fields.Binary(string="Copy of your Notarised Vaccine Certificate")
