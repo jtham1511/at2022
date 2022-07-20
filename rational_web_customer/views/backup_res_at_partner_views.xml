@@ -7,8 +7,7 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='image_1920']" position="after">
-                    <field name="recent_photo" widget="image" class="oe_avatar"
-                           options="{&quot;preview_image&quot;: &quot;avatar_128&quot;}"/>
+                    <field name="recent_photo" widget="image" class="oe_avatar"/>
                 </xpath>
                 <xpath expr="//field[@name='function']" position="before">
                     <field name="at2022_id"/>
@@ -92,8 +91,7 @@
                     <page name="document_upload" string="Document Upload">
                         <group>
                             <group>
-                                <field name="recent_photo" widget="image" class="oe_avatar"
-                                       options="{&quot;preview_image&quot;: &quot;avatar_128&quot;}"/>
+                                <field name="recent_photo" widget="image" class="oe_avatar"/>
                                 <field name="passport_upload"/>
                             </group>
                             <group>
@@ -127,7 +125,7 @@
                     <field name="street" string="Org Contact Person" optional="hide"/>
                     <field name="religion" optional="hide"/>
                     <field name="recent_photo" widget="image" class="oe_avatar"
-                           options="{&quot;preview_image&quot;: &quot;avatar_128&quot;}" optional="hide"/>
+                           optional="hide"/>
                 </xpath>
                 <field name="city" position="attributes">
                     <attribute name="invisible">1</attribute>
