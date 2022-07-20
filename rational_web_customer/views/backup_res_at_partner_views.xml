@@ -6,14 +6,8 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='image_1920']" position="after">
-                    <field name="recent_photo" widget="image" class="oe_avatar"/>
-                </xpath>
                 <xpath expr="//field[@name='function']" position="before">
                     <field name="at2022_id"/>
-                </xpath>
-                <xpath expr="//field[@name='image_1920']" position="attributes">
-                    <attribute name="invisible">1</attribute>
                 </xpath>
                 <field name="website" position="attributes">
                     <attribute name="invisible">1</attribute>
