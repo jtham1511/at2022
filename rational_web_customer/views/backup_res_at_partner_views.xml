@@ -6,6 +6,7 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
+
                 <xpath expr="//field[@name='function']" position="before">
                     <field name="at2022_id"/>
                 </xpath>
@@ -110,7 +111,10 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_tree"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='display_name']" position="after">
+                <xpath expr="//field[@name='display_name']" position="replace">
+                    <field name="name"/>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
                     <field name="at2022_id"/>
                     <field name="country_residence" optional="hide"/>
                     <field name="company_name" string="Organisation Name" optional="hide"/>
@@ -121,6 +125,7 @@
                     <field name="recent_photo" widget="image" class="oe_avatar"
                            optional="hide"/>
                 </xpath>
+
                 <field name="city" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </field>
@@ -144,10 +149,12 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.res_partner_kanban_view"/>
             <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="replace">
+                    <field name="name"/>
+                </xpath>
                 <xpath expr="//span[hasclass('oe_kanban_partner_links')]" position="before">
                     <field name="at2022_id"/>
                 </xpath>
-
             </field>
         </record>
     </data>
